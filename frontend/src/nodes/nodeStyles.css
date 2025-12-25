@@ -1,0 +1,202 @@
+/* Minimal glass output value style */
+.output-value-glass {
+  margin-top: 14px;
+  background: rgba(255,255,255,0.10);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #e3e3e3;
+  font-size: 1em;
+  min-height: 32px;
+  word-break: break-word;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, color 0.2s;
+}
+/* === Minimal Glass Button Style === */
+.base-node button,
+button,
+.SubmitButton {
+  background: rgba(255,255,255,0.10);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 8px;
+  color: #e3e3e3;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 8px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, color 0.2s;
+  outline: none;
+}
+.base-node button:hover,
+button:hover,
+.SubmitButton:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: #e3e3e3;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  color: #fff;
+}
+.base-node button:active,
+button:active,
+.SubmitButton:active {
+  background: rgba(255,255,255,0.24);
+  border-color: #fff;
+}
+
+/* === Dark Mode Workflow Editor (n8n/Zapier inspired) === */
+
+body, .react-flow__renderer {
+  background: #1E1E1E !important;
+}
+
+/* === Glassmorphism Node Style === */
+.base-node {
+  background: rgba(40, 44, 52, 0.55);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 16px;
+  min-width: 220px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  position: relative;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #E0E0E0;
+  padding: 0;
+  overflow: visible;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+.base-node.selected, .base-node:focus-within {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px #38bdf8, 0 8px 32px 0 rgba(56,189,248,0.12);
+  background: rgba(56,189,248,0.10);
+}
+
+/* Node header with accent color */
+/* Node header with glass accent */
+.base-node-header {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 12px 20px 10px 20px;
+  font-weight: 600;
+  font-size: 1.08em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: rgba(60, 60, 80, 0.22);
+  box-shadow: 0 2px 8px rgba(31,38,135,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.base-node-header.llm {
+  background: rgba(99,102,241,0.18);
+  border-bottom: 2px solid #7c3aed;
+  color: #e3e3e3;
+}
+.base-node-header.input {
+  background: rgba(56,189,248,0.18);
+  border-bottom: 2px solid #38bdf8;
+  color: #e3e3e3;
+}
+.base-node-header.output {
+  background: rgba(34,211,238,0.18);
+  border-bottom: 2px solid #22d3ee;
+  color: #e3e3e3;
+}
+.base-node-header.text {
+  background: rgba(251,191,36,0.18);
+  border-bottom: 2px solid #ea580c;
+  color: #222;
+}
+
+.base-node-title {
+  flex: 1;
+  font-size: 1.08em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: inherit;
+}
+
+.base-node-content {
+  padding: 14px 20px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Inputs, selects, textareas */
+.base-node input[type="text"],
+.base-node select,
+.base-node textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 8px;
+  font-size: 1em;
+  background: rgba(30,34,40,0.55);
+  color: #E0E0E0;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  caret-color: #fff !important;
+  outline: none;
+  backdrop-filter: blur(4px);
+}
+.base-node input[type="text"]:focus,
+.base-node select:focus,
+.base-node textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px #38bdf833;
+  background: rgba(56,189,248,0.10);
+}
+.base-node label {
+  font-size: 0.97em;
+  color: #b0b0b0;
+  font-weight: 500;
+  margin-bottom: 2px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+/* Handles (ports) */
+.react-flow__handle {
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.18) !important;
+  background: rgba(56,189,248,0.18) !important;
+  box-shadow: 0 2px 8px rgba(56,189,248,0.10);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  z-index: 10;
+}
+.react-flow__handle:hover {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 4px 16px rgba(56,189,248,0.18);
+}
+.react-flow__handle:after {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: #38bdf8;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Misc */
+.base-node .icon {
+  font-size: 1.2em;
+  margin-right: 6px;
+}
+.base-node .dim {
+  color: #b0b0b0;
+  font-size: 0.97em;
+}
